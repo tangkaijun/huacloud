@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.huacloud</groupId>
+    <artifactId>huacloud</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+
+    <modules>
+        <module>huacloud-module-core</module>
+        <module>huacloud-module-common</module>
+        <module>huacloud-module-log</module>
+        <module>huacloud-module-config</module>
+        <module>huacloud-module-api</module>
+        <module>huacloud-module-manager</module>
+    </modules>
+
+    <properties>
+        <pagehelper.spring.boot.starter.version>1.2.3</pagehelper.spring.boot.starter.version>
+        <spring.boot.starter.version>1.4.5.RELEASE</spring.boot.starter.version>
+        <mybatis.spring.boot.starter.version>1.3.1</mybatis.spring.boot.starter.version>
+        <mapper.spring.boot.starter.version>1.1.4</mapper.spring.boot.starter.version>
+        <camel.spring.boot.starter.version>2.19.0</camel.spring.boot.starter.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+
+    <dependencyManagement>
+
+        <dependencies>
+            <!--分页插件-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.spring.boot.starter.version}</version>
+            </dependency>
+
+            <!--springboot的web配置-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.spring.boot.starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${mapper.spring.boot.starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-spring-boot-starter</artifactId>
+                <version>${camel.spring.boot.starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+
+</project>
